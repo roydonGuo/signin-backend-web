@@ -17,7 +17,7 @@ export function listDeptExcludeChild(deptId) {
   })
 }
 
-// 查询社区详细
+// 查询详细
 export function getDept(deptId) {
   return request({
     url: '/system/dept/' + deptId,
@@ -50,7 +50,7 @@ export function delDept(deptId) {
     method: 'delete'
   })
 }
-//查询社区数量
+//查询部门数量
 export function getCommunityAmount() {
   return request({
     url: '/system/dept/amount',

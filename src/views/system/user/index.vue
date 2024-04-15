@@ -1,20 +1,20 @@
 <template>
   <div class="app-container">
     <el-row :gutter="20">
-      <!--社区数据-->
-      <el-col :span="4" :xs="24">
-        <div class="head-container">
-          <el-input v-model="deptName" placeholder="请输入部门名称" clearable size="small" prefix-icon="el-icon-search"
-                    style="margin-bottom: 20px"/>
-        </div>
-        <div class="head-container">
-          <el-tree :data="deptOptions" :props="defaultProps" :expand-on-click-node="false"
-                   :filter-node-method="filterNode" ref="tree" highlight-current accordion
-                   @node-click="handleNodeClick"/>
-        </div>
-      </el-col>
+      <!--部门数据-->
+      <!--      <el-col :span="4" :xs="24">-->
+      <!--        <div class="head-container">-->
+      <!--          <el-input v-model="deptName" placeholder="请输入部门名称" clearable size="small" prefix-icon="el-icon-search"-->
+      <!--                    style="margin-bottom: 20px"/>-->
+      <!--        </div>-->
+      <!--        <div class="head-container">-->
+      <!--          <el-tree :data="deptOptions" :props="defaultProps" :expand-on-click-node="false"-->
+      <!--                   :filter-node-method="filterNode" ref="tree" highlight-current accordion-->
+      <!--                   @node-click="handleNodeClick"/>-->
+      <!--        </div>-->
+      <!--      </el-col>-->
       <!--用户数据-->
-      <el-col :span="20" :xs="24">
+      <el-col :span="24" :xs="24">
         <!-- 搜索栏 -->
         <el-form :model="queryParams" ref="queryForm" size="small" :inline="true" v-show="showSearch"
                  label-width="68px">
@@ -98,16 +98,32 @@
                            v-if="columns[1].visible" :show-overflow-tooltip="true"/>
           <el-table-column label="用户昵称" align="center" key="nickName" prop="nickName" width="160"
                            v-if="columns[2].visible" :show-overflow-tooltip="true"/>
-          <el-table-column label="所属单元" align="center" key="deptName" prop="dept.deptName" v-if="columns[3].visible"
-                           :show-overflow-tooltip="true"/>
+<!--          <el-table-column label="所属单元" align="center" key="deptName" prop="dept.deptName" v-if="columns[3].visible"-->
+<!--                           :show-overflow-tooltip="true"/>-->
           <el-table-column label="手机号码" align="center" key="phonenumber" prop="phonenumber"
                            v-if="columns[4].visible"
                            width="120"/>
           <el-table-column label="真实姓名" align="center" key="realName" prop="realName" v-if="columns[5].visible"
                            :show-overflow-tooltip="true"/>
-          <el-table-column label="身份证号" align="center" key="idCard" prop="idCard" width="160"
-                           v-if="columns[6].visible"
-                           :show-overflow-tooltip="true"/>
+          <!--          <el-table-column label="真实姓名" align="center" key="realFace" prop="realName" v-if="columns[5].visible"-->
+          <!--                           :show-overflow-tooltip="true"/>-->
+          <el-table-column v-viewer label="认证面部" align="center" width="100">
+            <template slot-scope="scope">
+              <el-image style="height: 50px;border-radius: 6px;" lazy :src="scope.row.realFace"
+                        :preview-src-list="[scope.row.realFace]" :fit="contain">
+                <div slot="placeholder" class="image-slot">
+                  <i class="el-icon-loading"></i>加载中...
+                </div>
+                <div slot="error" class="image-slot">
+                  <i class="el-icon-picture-outline"></i>
+                </div>
+              </el-image>
+              <!-- <div><img style="max-height: 100px;" :src="scope.row.coverImg" /></div> -->
+            </template>
+          </el-table-column>
+<!--          <el-table-column label="身份证号" align="center" key="idCard" prop="idCard" width="160"-->
+<!--                           v-if="columns[6].visible"-->
+<!--                           :show-overflow-tooltip="true"/>-->
           <el-table-column label="性别" align="center" key="sex" prop="sex" v-if="columns[7].visible" width="80">
             <template slot-scope="scope">
               <dict-tag :options="dict.type.sys_user_sex" :value="scope.row.sex"/>
@@ -326,11 +342,11 @@ export default {
       userList: null,
       // 弹出层标题
       title: "",
-      // 社区树选项
+      // 部门树选项
       deptOptions: undefined,
       // 是否显示弹出层
       open: false,
-      // 社区名称
+      // 部门名称
       deptName: undefined,
       // 默认密码
       initPassword: undefined,

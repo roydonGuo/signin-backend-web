@@ -78,7 +78,7 @@ export default {
         legend: {
           left: 'center',
           bottom: '10',
-          data: ['城市数', '社区数', '人数']
+          data: ['城市数', '部门数', '人数']
         },
         series: [{
           type: 'radar',
@@ -99,7 +99,7 @@ export default {
             },
             {
               value: [4000, 9000, 15000, 15000, 13000, 11000],
-              name: '社区数'
+              name: '部门数'
             },
             {
               value: [5500, 11000, 12000, 15000, 12000, 12000],

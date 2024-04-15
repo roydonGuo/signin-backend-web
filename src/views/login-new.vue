@@ -9,7 +9,7 @@
       <div class="field">
         <!-- [移动端]标题 -->
         <h2 class="mobile-title">
-          <div class="title" style="padding: 10px;">社区后台管理系统</div>
+          <div class="title" style="padding: 10px;">签到后台管理系统</div>
         </h2>
         <!-- 表单 -->
         <div class="form-cont">

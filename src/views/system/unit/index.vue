@@ -60,7 +60,7 @@
         <el-row>
           <el-col :span="24" v-if="form.parentId !== 0">
             <el-form-item label="上级" prop="parentId">
-              <treeselect v-model="form.parentId" :options="unitOptions" :normalizer="normalizer" placeholder="选择上级社区" />
+              <treeselect v-model="form.parentId" :options="unitOptions" :normalizer="normalizer" placeholder="选择上级部门" />
             </el-form-item>
           </el-col>
         </el-row>
