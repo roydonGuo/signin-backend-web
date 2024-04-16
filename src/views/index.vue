@@ -32,50 +32,50 @@
       </el-row>
     </div>
 
-    <panel-group @handleSetLineChartData="handleSetLineChartData" />
+<!--    <panel-group @handleSetLineChartData="handleSetLineChartData" />-->
 
-    <el-row style="background:#fff;padding:10px;margin-bottom:20px;border-radius: 10px;">
-      <line-chart :chart-data="lineChartData" />
-    </el-row>
+<!--    <el-row style="background:#fff;padding:10px;margin-bottom:20px;border-radius: 10px;">-->
+<!--      <line-chart :chart-data="lineChartData" />-->
+<!--    </el-row>-->
 
-    <el-row :gutter="24">
-      <el-col :xs="24" :sm="24" :lg="12">
-        <div class="chart-wrapper">
-          <china-map></china-map>
-        </div>
-      </el-col>
-      <el-col :xs="24" :sm="24" :lg="12">
-        <div class="chart-wrapper">
-          <div class="platform-flex">
-            <el-card v-for="i in 8" :key="i" shadow="hover" class="platform-card">
-              <router-link to="" @click.native="openLink(`https://github.com/`)">
-                <img class="platform-avatar"
-                  src="https://community-server-oss.oss-cn-shanghai.aliyuncs.com/user-avatar/2023/05/23/blob0edbd97936514351a2c5c9075f3db8f9.jpeg">
-                <span class="platform-name">github</span>
-              </router-link>
-            </el-card>
-          </div>
-        </div>
-      </el-col>
-    </el-row>
+<!--    <el-row :gutter="24">-->
+<!--      <el-col :xs="24" :sm="24" :lg="12">-->
+<!--        <div class="chart-wrapper">-->
+<!--          <china-map></china-map>-->
+<!--        </div>-->
+<!--      </el-col>-->
+<!--      <el-col :xs="24" :sm="24" :lg="12">-->
+<!--        <div class="chart-wrapper">-->
+<!--          <div class="platform-flex">-->
+<!--            <el-card v-for="i in 8" :key="i" shadow="hover" class="platform-card">-->
+<!--              <router-link to="" @click.native="openLink(`https://github.com/`)">-->
+<!--                <img class="platform-avatar"-->
+<!--                  src="https://community-server-oss.oss-cn-shanghai.aliyuncs.com/user-avatar/2023/05/23/blob0edbd97936514351a2c5c9075f3db8f9.jpeg">-->
+<!--                <span class="platform-name">github</span>-->
+<!--              </router-link>-->
+<!--            </el-card>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </el-col>-->
+<!--    </el-row>-->
 
-    <el-row :gutter="24">
-      <el-col :xs="24" :sm="24" :lg="8">
-        <div class="chart-wrapper">
-          <raddar-chart />
-        </div>
-      </el-col>
-      <el-col :xs="24" :sm="24" :lg="8">
-        <div class="chart-wrapper">
-          <pie-chart />
-        </div>
-      </el-col>
-      <el-col :xs="24" :sm="24" :lg="8">
-        <div class="chart-wrapper">
-          <bar-chart />
-        </div>
-      </el-col>
-    </el-row>
+<!--    <el-row :gutter="24">-->
+<!--      <el-col :xs="24" :sm="24" :lg="8">-->
+<!--        <div class="chart-wrapper">-->
+<!--          <raddar-chart />-->
+<!--        </div>-->
+<!--      </el-col>-->
+<!--      <el-col :xs="24" :sm="24" :lg="8">-->
+<!--        <div class="chart-wrapper">-->
+<!--          <pie-chart />-->
+<!--        </div>-->
+<!--      </el-col>-->
+<!--      <el-col :xs="24" :sm="24" :lg="8">-->
+<!--        <div class="chart-wrapper">-->
+<!--          <bar-chart />-->
+<!--        </div>-->
+<!--      </el-col>-->
+<!--    </el-row>-->
 
     <!-- 随机名言 -->
     <div class="index-container">

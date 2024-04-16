@@ -26,10 +26,10 @@
             <el-input v-model="queryParams.phonenumber" placeholder="请输入手机号码" clearable style="width: 240px"
                       @keyup.enter.native="handleQuery"/>
           </el-form-item>
-          <el-form-item label="身份证" prop="idCard">
-            <el-input v-model="queryParams.idCard" placeholder="请输入身份证" clearable style="width: 240px"
-                      @keyup.enter.native="handleQuery"/>
-          </el-form-item>
+<!--          <el-form-item label="身份证" prop="idCard">-->
+<!--            <el-input v-model="queryParams.idCard" placeholder="请输入身份证" clearable style="width: 240px"-->
+<!--                      @keyup.enter.native="handleQuery"/>-->
+<!--          </el-form-item>-->
           <el-form-item label="状态" prop="status">
             <el-select v-model="queryParams.status" placeholder="用户状态" clearable style="width: 240px">
               <el-option v-for="dict in dict.type.sys_normal_disable" :key="dict.value" :label="dict.label"
@@ -98,8 +98,8 @@
                            v-if="columns[1].visible" :show-overflow-tooltip="true"/>
           <el-table-column label="用户昵称" align="center" key="nickName" prop="nickName" width="160"
                            v-if="columns[2].visible" :show-overflow-tooltip="true"/>
-<!--          <el-table-column label="所属单元" align="center" key="deptName" prop="dept.deptName" v-if="columns[3].visible"-->
-<!--                           :show-overflow-tooltip="true"/>-->
+          <!--          <el-table-column label="所属单元" align="center" key="deptName" prop="dept.deptName" v-if="columns[3].visible"-->
+          <!--                           :show-overflow-tooltip="true"/>-->
           <el-table-column label="手机号码" align="center" key="phonenumber" prop="phonenumber"
                            v-if="columns[4].visible"
                            width="120"/>
@@ -121,9 +121,9 @@
               <!-- <div><img style="max-height: 100px;" :src="scope.row.coverImg" /></div> -->
             </template>
           </el-table-column>
-<!--          <el-table-column label="身份证号" align="center" key="idCard" prop="idCard" width="160"-->
-<!--                           v-if="columns[6].visible"-->
-<!--                           :show-overflow-tooltip="true"/>-->
+          <!--          <el-table-column label="身份证号" align="center" key="idCard" prop="idCard" width="160"-->
+          <!--                           v-if="columns[6].visible"-->
+          <!--                           :show-overflow-tooltip="true"/>-->
           <el-table-column label="性别" align="center" key="sex" prop="sex" v-if="columns[7].visible" width="80">
             <template slot-scope="scope">
               <dict-tag :options="dict.type.sys_user_sex" :value="scope.row.sex"/>

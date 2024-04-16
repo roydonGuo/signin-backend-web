@@ -15,11 +15,11 @@
       <!-- 通知 -->
       <notification id="notification" :noticeList="noticeList" class="right-menu-item hover-effect" />
       <!-- 下载手机App -->
-      <el-tooltip class="svg-icon-item" effect="dark" content="下载手机App" placement="bottom">
-        <el-badge is-dot>
-          <svg-icon icon-class="iphone12" @click.stop="Toast" />
-        </el-badge>
-      </el-tooltip>
+<!--      <el-tooltip class="svg-icon-item" effect="dark" content="下载手机App" placement="bottom">-->
+<!--        <el-badge is-dot>-->
+<!--          <svg-icon icon-class="iphone12" @click.stop="Toast" />-->
+<!--        </el-badge>-->
+<!--      </el-tooltip>-->
       <!--布局大小设置 -->
       <el-tooltip content="布局大小" effect="dark" placement="bottom">
         <size-select id="size-select" class="right-menu-item hover-effect" />
