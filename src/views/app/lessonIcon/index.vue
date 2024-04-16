@@ -72,7 +72,7 @@
       :limit.sync="queryParams.pageSize"
       @pagination="getList"/>
 
-    <!-- 添加或修改【请填写功能名称】对话框 -->
+    <!-- 添加或修改对话框 -->
     <el-dialog :title="title" :visible.sync="open" width="500px" append-to-body>
       <el-form ref="form" :model="form" :rules="rules" label-width="80px">
         <el-form-item label="图片" prop="remoteUrl">
@@ -115,7 +115,7 @@ export default {
       showSearch: false,
       // 总条数
       total: 0,
-      // 【请填写功能名称】表格数据
+      // 表格数据
       iconList: [],
       // 弹出层标题
       title: "",
@@ -141,7 +141,7 @@ export default {
     this.getList();
   },
   methods: {
-    /** 查询【请填写功能名称】列表 */
+    /** 查询列表 */
     getList() {
       this.loading = true;
       listIcon(this.queryParams).then(response => {
