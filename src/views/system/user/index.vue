@@ -91,15 +91,12 @@
                   <i class="el-icon-picture-outline"></i>
                 </div>
               </el-image>
-              <!-- <div><img style="max-height: 100px;" :src="scope.row.coverImg" /></div> -->
             </template>
           </el-table-column>
           <el-table-column fixed="left" label="用户账号" align="center" key="userName" prop="userName"
                            v-if="columns[1].visible" :show-overflow-tooltip="true"/>
           <el-table-column label="用户昵称" align="center" key="nickName" prop="nickName" width="160"
                            v-if="columns[2].visible" :show-overflow-tooltip="true"/>
-          <!--          <el-table-column label="所属单元" align="center" key="deptName" prop="dept.deptName" v-if="columns[3].visible"-->
-          <!--                           :show-overflow-tooltip="true"/>-->
           <el-table-column label="手机号码" align="center" key="phonenumber" prop="phonenumber"
                            v-if="columns[4].visible"
                            width="120"/>
@@ -118,7 +115,6 @@
                   <i class="el-icon-picture-outline"></i>
                 </div>
               </el-image>
-              <!-- <div><img style="max-height: 100px;" :src="scope.row.coverImg" /></div> -->
             </template>
           </el-table-column>
           <!--          <el-table-column label="身份证号" align="center" key="idCard" prop="idCard" width="160"-->
