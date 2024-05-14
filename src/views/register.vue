@@ -132,7 +132,7 @@ export default {
   align-items: center;
   height: 100%;
   background-color: #e0e4eb;
-  background-image: url("../assets/images/bg.png");
+  background-image: url("../assets/images/carousel-2.webp");
   background-size: cover;
 }
 

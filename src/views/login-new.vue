@@ -16,7 +16,7 @@
           <el-tabs class="form" v-model="loginType" style="float:none;">
             <el-tab-pane label="账号密码登录" name="up"></el-tab-pane>
             <el-tab-pane label="手机短信登录" name="sms"></el-tab-pane>
-            <el-tab-pane label="二维码登录" name="qr"></el-tab-pane>
+<!--            <el-tab-pane label="二维码登录" name="qr"></el-tab-pane>-->
           </el-tabs>
           <div>
             <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form">
